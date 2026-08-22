@@ -21,9 +21,6 @@ client.once("ready", function () {
   console.log("SDK successfully initialized!");
 
   app.get("/", async (req, res) => {
-    // Tracking de eventos
-    client.track(process.env.LD_EVENT_KEY, context);
-
     // Evaluación del feature flag
     client.variation(
       "feat-new-menu",
